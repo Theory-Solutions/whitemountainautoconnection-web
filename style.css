@@ -1,4 +1,4 @@
-/* 1. BRANDING & RESET */
+/* 1. BRANDING & MOBILE-FIRST RESET */
 :root {
     --theory-blue: #1a365d;
     --accent-red: #e63946;
@@ -18,23 +18,22 @@ body {
 header { 
     background-color: var(--theory-blue); 
     color: white; 
-    padding: 3rem 1.5rem; /* Better vertical breathing room */
+    padding: 3rem 1.5rem; 
     text-align: center;
     border-bottom: 6px solid var(--accent-red);
 }
 
-header h1 { font-size: 1.75rem; margin-bottom: 0.5rem; line-height: 1.2; }
-header p { font-size: 1rem; opacity: 0.9; font-weight: 300; }
+header h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
 
-/* 3. MAIN CONTENT CONTAINER */
+/* 3. MAIN CARD (The "Tunnel" Look) */
 main { 
     max-width: 550px; 
-    margin: -1.5rem auto 2rem; /* Pulls card slightly over header for modern look */
+    margin: -1.5rem auto 2rem; 
     background: white; 
     padding: 2rem; 
     border-radius: 12px; 
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    width: 92%; /* Ensures side spacing on mobile */
+    width: 92%; /* Side spacing for mobile */
 }
 
 /* 4. SECTION SPACING */
@@ -47,7 +46,7 @@ h2 {
     padding-bottom: 0.5rem; 
 }
 
-/* 5. FORM & INPUT POLISH */
+/* 5. INPUTS (Preventing iPhone Zoom) */
 label { display: block; margin-top: 1.25rem; font-weight: 600; font-size: 0.85rem; color: #475569; }
 select, input, textarea { 
     width: 100%; 
@@ -55,11 +54,8 @@ select, input, textarea {
     margin-top: 0.5rem; 
     border: 1px solid #cbd5e0; 
     border-radius: 8px; 
-    font-size: 16px; /* Prevents iPhone zoom-in */
-    background: #fff;
+    font-size: 16px; /* Essential for mobile friendliness */
 }
-
-textarea { min-height: 100px; }
 
 /* 6. THE RESULTS BOX */
 .result-box { 
@@ -70,7 +66,7 @@ textarea { min-height: 100px; }
     margin: 2rem 0; 
     border-radius: 10px; 
 }
-#priceRange { color: #15803d; font-size: 2.25rem; font-weight: 800; margin-top: 0.25rem; }
+#priceRange { color: #15803d; font-size: 2.25rem; font-weight: 800; }
 
 /* 7. BUTTONS */
 button { 
@@ -83,23 +79,8 @@ button {
     font-size: 1.1rem; 
     font-weight: 700; 
     cursor: pointer; 
-    transition: transform 0.1s ease;
 }
-button:active { transform: scale(0.98); }
 
-/* 8. FOOTER SPACING */
-footer { 
-    text-align: center; 
-    padding: 2rem 1.5rem 4rem; 
-    font-size: 0.8rem; 
-    color: #64748b; 
-}
-.legal-claims { margin-bottom: 1.5rem; line-height: 1.6; }
+/* 8. FOOTER */
+footer { text-align: center; padding: 2rem 1.5rem; font-size: 0.8rem; color: #64748b; }
 .network-links a { color: var(--theory-blue); text-decoration: none; font-weight: 700; margin: 0 8px; }
-
-/* 9. MOBILE SPECIFIC TWEAKS */
-@media (max-width: 480px) {
-    header { padding: 2.5rem 1rem; }
-    main { padding: 1.5rem; margin-top: -1rem; }
-    #priceRange { font-size: 1.75rem; }
-}
