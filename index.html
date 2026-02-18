@@ -1,86 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2F9M4WGYW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F2F9M4WGYW');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dent Repair Show Low & Pinetop | White Mountain Auto Connections</title>
-    <meta name="description" content="Local mobile dent repair in Show Low and Pinetop. Paintless repair experts.">
+    <title>White Mountain Auto Connections | Show Low & Pinetop Dent Repair</title>
+    
+    <script>
+        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+            window.history.replaceState({}, '', '/paintless-dent-repair-show-low-pinetop');
+        }
+    </script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <h1>White Mountain Automotive Connections</h1>
-            <p class="tagline">Local Experts Fixing Dents & Dings – No Paint Required</p>
-            <div class="explanation-box">
-                <p><strong>What is Paintless Repair?</strong> We massage dents out from the inside. Since we don't use paint or bondo, it's <strong>cheaper</strong>, <strong>faster</strong>, and <strong>keeps your car's original value.</strong></p>
-            </div>
-        </div>
+    <header>
+        <h1>White Mountain Auto Connections</h1>
+        <p>Expert Mobile Dent Repair & Hail Specialist</p>
     </header>
 
-    <section class="about-us">
-        <div class="container">
-            <h2>Local Pros, Zero Stress</h2>
-            <p>We are a local networking platform that connects you directly to verified, top-rated professionals in the White Mountains. We do the legwork so you don't have to.</p>
-        </div>
-    </section>
-
-    <section class="calculator-section">
-        <div class="container">
-            <div class="calculator-card">
-                <h2>Instant Price Estimator</h2>
-                <div class="input-wrap">
-                    <label>How big is the dent?</label>
-                    <select id="dentSize">
-                        <option value="75">Small (Dime Size)</option>
-                        <option value="125">Average (Quarter Size)</option>
-                        <option value="200">Large (Half Dollar Size)</option>
-                        <option value="350">Big Crease or Hail Damage</option>
-                    </select>
-                </div>
-                <div class="input-wrap">
-                    <label>Where is it located?</label>
-                    <select id="panelType">
-                        <option value="1">Side Door or Fender</option>
-                        <option value="1.5">Roof or Aluminum Hood</option>
-                        <option value="1.3">On a Body Line or Edge</option>
-                    </select>
-                </div>
-                <div class="estimate-result">
-                    <p>Ballpark Repair Cost:</p>
-                    <div id="priceRange">$75 - $125</div>
-                </div>
-                <button type="button" class="btn-primary" onclick="scrollToForm()">Get My Mobile Quote</button>
+    <main>
+        <section id="about">
+            <h2>We Do the Leg Work For You</h2>
+            <p>Don't waste days calling shops and waiting for callbacks. We are a <strong>local connection network</strong> that matches your specific damage with the best available PDR specialist in the White Mountains.</p>
+            
+            <div style="margin-top: 15px; background: #f1f5f9; padding: 15px; border-radius: 8px; font-size: 0.9rem;">
+                <p><strong>✓ Door Dings & Creases:</strong> Fast mobile service at your home or office.</p>
+                <p><strong>✓ Hail Damage:</strong> Specialized repair that keeps your factory paint 100% intact.</p>
+                <p><strong>✓ Quality Guaranteed:</strong> We only work with verified, high-end technicians.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="lead-section" class="form-section">
-        <div class="container">
-            <form id="lead-form" class="lead-form-container">
-                <h3>Request Your Repair</h3>
-                <input type="text" id="customer_name" placeholder="Your Full Name" required>
-                <input type="tel" id="phone" placeholder="Your Phone Number" required>
-                <input type="text" id="zip_code" placeholder="Zip Code (Show Low / Pinetop)" required>
-                
-                <div style="display:none;">
-                    <input type="text" id="hp_email" name="hp_email" tabindex="-1" autocomplete="off">
-                </div>
+        <section id="calculator">
+            <h2>Ballpark Repair Estimator</h2>
+            <label for="dentSize">Type of Damage</label>
+            <select id="dentSize">
+                <option value="75">Small Ding (Dime Size)</option>
+                <option value="150">Medium Dent (Golf Ball)</option>
+                <option value="300">Large Dent (Baseball)</option>
+                <option value="500">Hail Damage (Multiple Panels)</option>
+            </select>
 
-                <textarea id="notes" placeholder="Car Details (Year, Make, Model)..."></textarea>
+            <label for="panelType">Panel Material/Location</label>
+            <select id="panelType">
+                <option value="1.0">Steel Door or Fender</option>
+                <option value="1.5">Hood, Roof, or Trunk</option>
+                <option value="2.0">Aluminum or Sharp Body Line</option>
+            </select>
+
+            <div class="result-box">
+                <p>Estimated Specialist Range:</p>
+                <h3 id="priceRange">$75 - $125</h3>
+            </div>
+            <button onclick="document.getElementById('lead-section').scrollIntoView({behavior:'smooth'})">Get My Mobile Quote</button>
+        </section>
+
+        <section id="lead-section">
+            <h2>Request Your Local Specialist</h2>
+            <form id="lead-form">
+                <div style="display:none;"><input type="text" id="hp_email"></div>
+                <input type="text" id="customer_name" placeholder="Your Name" required>
+                <input type="tel" id="phone" placeholder="Mobile Phone (For Text Quote)" required>
+                <input type="text" id="zip_code" placeholder="Zip Code (85901, 85929, etc)" required>
+                <textarea id="notes" placeholder="Year/Make/Model? Is it hail damage or a single dent?"></textarea>
                 <button type="submit" id="submitBtn">Send to Specialist</button>
-                <p class="beta-tag">Theory Solutions Platform | Verified Local Service</p>
             </form>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="legal-footer">
-        <div class="container">
-            <p><strong>Legal Disclaimer:</strong> White Mountain Automotive Connections is a networking platform. Theory Solutions does not perform repairs and is not liable for services rendered. Providers operate under their own independent licenses and insurance.</p>
-            <hr>
-            <p>Site Run & Maintained by <strong>Theory Solutions</strong></p>
+    <footer>
+        <div class="legal-claims">
+            <p><strong>Theory Solutions Platform:</strong> We are a referral network. Repairs are performed by independent local specialists. Estimates are preliminary until verified by a technician.</p>
         </div>
+        <div class="network-links">
+            <a href="/">Home</a> | 
+            <a href="https://theory-solutions.com">Theory Solutions Hub</a> | 
+            <a href="/privacy-policy">Privacy</a>
+        </div>
+        <p style="margin-top:15px;">&copy; 2026 Theory Solutions | 7344 E 20th St, Tucson, AZ</p>
     </footer>
 
     <script src="script.js"></script>
