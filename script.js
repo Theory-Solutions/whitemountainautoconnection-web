@@ -1,77 +1,85 @@
-// --- 1. Ballpark Repair Estimator Logic ---
-const dentSize = document.getElementById('dentSize');
-const panelType = document.getElementById('panelType');
-const priceRange = document.getElementById('priceRange');
+// --- THEORY SOLUTIONS: MASTER PRODUCTION SCRIPT ---
 
+// 1. Ballpark Estimator (For Index Page)
 function updateEstimate() {
-    const base = parseInt(dentSize.value);
-    const multiplier = parseFloat(panelType.value);
-    const min = Math.round(base * multiplier);
-    const max = Math.round(min * 1.5);
-    priceRange.innerText = `$${min} - $${max}`;
-}
+    const size = document.getElementById('dent_size')?.value;
+    const panel = document.getElementById('panel_type')?.value;
+    const priceDisplay = document.getElementById('price-range');
 
-// Listen for changes on the dropdowns
-dentSize.addEventListener('change', updateEstimate);
-panelType.addEventListener('change', updateEstimate);
-
-// --- 2. Google Ads Conversion Signal ---
-function triggerGoogleConversion() {
-    if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17963694572',
-            'value': 20.0, // Your target Cost Per Lead (CPL)
-            'currency': 'USD'
-        });
-        console.log('Google Ads conversion signal successfully sent.');
-    }
-}
-
-// --- 3. Lead Form Submission to Database ---
-const leadForm = document.getElementById('lead-form');
-const submitBtn = document.getElementById('submitBtn');
-
-leadForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    // Honeypot check for bots to protect your budget
-    if (document.getElementById('hp_email').value !== "") return;
-
-    submitBtn.disabled = true;
-    submitBtn.innerText = "Sending to Specialist...";
-
-    const formData = {
-        customer_name: document.getElementById('customer_name').value,
-        phone: document.getElementById('phone').value,
-        zip_code: document.getElementById('zip_code').value,
-        notes: document.getElementById('notes').value,
-        source_tag: 'google_ads_pdr_showlow', // Tags lead source for Theory Solutions
-        created_at: new Date().toISOString()
+    const rates = {
+        'dime': { 'standard': '75 - 125', 'complex': '125 - 200' },
+        'quarter': { 'standard': '125 - 175', 'complex': '175 - 250' },
+        'half-dollar': { 'standard': '175 - 225', 'complex': '225 - 350' },
+        'tennis': { 'standard': '250 - 350', 'complex': '350 - 500' }
     };
 
-    try {
-        // Replace with your actual Theory Solutions / Supabase endpoint
-        const response = await fetch('YOUR_SUPABASE_OR_API_URL', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData)
-        });
-
-        if (response.ok) {
-            // SUCCESS: Trigger the Google Ads conversion signal
-            triggerGoogleConversion();
-            
-            alert("Success! A local PDR specialist will text you shortly for a quote.");
-            leadForm.reset();
-            updateEstimate(); // Reset estimator to default
-        } else {
-            throw new Error('Submission failed');
-        }
-    } catch (err) {
-        console.error(err);
-        alert("Connection error. Please try again or call us directly.");
-    } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerText = "Send to Specialist";
+    if (size && panel && priceDisplay) {
+        priceDisplay.innerText = `$${rates[size][panel]}`;
     }
-});
+}
+
+// 2. Unified Lead Submission
+const leadForm = document.getElementById('collisionForm') || document.getElementById('lead-form');
+const submitBtn = document.getElementById('submitBtn');
+
+if (leadForm) {
+    leadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        if (document.getElementById('hp_email').value !== "") return;
+
+        const phoneInput = document.getElementById('phone');
+        const rawPhone = phoneInput.value.replace(/\D/g, '');
+        if (rawPhone.length !== 10) {
+            alert("Please enter a valid 10-digit phone number.");
+            return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Connecting...";
+
+        const nameVal = (document.getElementById('customer_name') || document.getElementById('name')).value;
+        const serviceType = document.getElementById('service_type')?.value || 'pdr';
+        
+        // Match the database key: zip_code
+        const zipVal = (document.getElementById('zip_code') || document.getElementById('zip'))?.value || '85901';
+
+        const payload = {
+            customer_name: nameVal,
+            phone: rawPhone,
+            service_type: serviceType,
+            zip_code: zipVal, // DATABASE REQUIREMENT
+            notes: `[VEHICLE: ${document.getElementById('vehicle')?.value || 'N/A'}] [CLAIM: ${document.getElementById('claim_type')?.value || 'N/A'}] | ${document.getElementById('notes').value}`,
+            source_tag: `google_ads_${serviceType}`
+        };
+
+        try {
+            const response = await fetch('https://chirnldyffatubstgudq.supabase.co/functions/v1/dispatch-call', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer 685a90e030b9bee750f5343a600518bb997f08e6dec99abd43f540f1283dcfb6'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            if (response.ok) {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', { 'send_to': 'AW-17963694572', 'value': 20.0, 'currency': 'USD' });
+                }
+                alert("Success! Your request has been sent.");
+                leadForm.reset();
+                if (document.getElementById('price-range')) document.getElementById('price-range').innerText = "--";
+            } else {
+                const errorText = await response.text();
+                throw new Error(errorText);
+            }
+        } catch (err) {
+            console.error("Connection Error:", err);
+            alert("Submission error: " + err.message);
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerText = serviceType === 'collision' ? "SEND TO COLLISION SPECIALIST" : "GET FREE ESTIMATE";
+        }
+    });
+}

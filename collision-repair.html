@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Body Repair & Collision Center | Show Low, AZ</title>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17963694572"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17963694572');
+    </script>
+
+    <style>
+        :root { --wmac-navy: #1a3044; --wmac-red: #d32f2f; --wmac-bg: #f4f7f9; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--wmac-bg); margin: 0; color: #333; }
+        
+        /* Brand Header */
+        .header-brand { background-color: var(--wmac-navy); color: white; text-align: center; padding: 40px 0; border-bottom: 5px solid var(--wmac-red); }
+        
+        /* Navigation */
+        .back-nav { padding: 15px 5%; background: white; border-bottom: 1px solid #ddd; }
+        .back-nav a { color: var(--wmac-navy); text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+
+        /* Main Intake Card */
+        .main-card { max-width: 600px; margin: 40px auto; background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; }
+        .section-padding { padding: 40px; }
+        
+        .intake-box { background: #eef2f6; border-left: 5px solid var(--wmac-navy); padding: 25px; margin-bottom: 30px; border-radius: 4px; }
+        .status-pill { display: inline-block; padding: 5px 15px; background: var(--wmac-red); color: white; border-radius: 20px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; margin-bottom: 12px; }
+        
+        /* Form Styling */
+        label { display: block; font-weight: bold; margin-top: 20px; font-size: 0.95rem; color: var(--wmac-navy); }
+        select, input, textarea { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #cbd5e0; border-radius: 6px; box-sizing: border-box; font-size: 1rem; transition: border 0.3s; }
+        select:focus, input:focus, textarea:focus { border-color: var(--wmac-navy); outline: none; }
+        
+        .submit-btn { background-color: var(--wmac-navy); color: white; border: none; width: 100%; padding: 20px; font-size: 1.2rem; font-weight: bold; cursor: pointer; border-radius: 6px; margin-top: 25px; transition: 0.3s transform, 0.3s background; }
+        .submit-btn:hover { background-color: #122232; transform: translateY(-2px); }
+        .submit-btn:disabled { background-color: #ccc; cursor: not-allowed; }
+
+        /* Trust List */
+        .trust-list { font-size: 0.9rem; list-style: none; padding: 0; margin: 25px 0; border-top: 1px solid #eee; padding-top: 20px; }
+        .trust-list li { margin-bottom: 12px; padding-left: 25px; position: relative; color: #4a5568; }
+        .trust-list li::before { content: "✓"; color: var(--wmac-red); position: absolute; left: 0; font-weight: bold; }
+
+        .seo-footer { background: #fff; padding: 30px; margin-top: 50px; font-size: 0.85rem; color: #718096; text-align: center; border-top: 1px solid #e2e8f0; }
+    </style>
+</head>
+<body>
+
+    <header class="header-brand">
+        <h1 style="margin:0; font-size: 2rem;">Show Low Collision & Auto Body</h1>
+        <p style="margin:8px 0 0; font-size: 1rem; opacity: 0.9;">Professional Intake & Assessment Network</p>
+    </header>
+
+    <div class="back-nav">
+        <a href="index.html">← Back to PDR & Mobile Dent Repair</a>
+    </div>
+
+    <div class="main-card">
+        <div class="section-padding">
+            <div class="intake-box">
+                <div class="status-pill">Local Priority Intake</div>
+                <h2 style="margin:0 0 10px 0; font-size: 1.5rem; color: var(--wmac-navy);">Fast-Track Assessment</h2>
+                <p style="font-size: 0.95rem; color: #4a5568; margin:0;">Complete this form to connect with the leading local body shop network.</p>
+            </div>
+
+            <form id="collisionForm">
+                <input type="hidden" id="service_type" value="collision">
+                <div style="display:none;"><input type="text" id="hp_email"></div>
+
+                <label for="claim_type">Type of Repair Needed</label>
+                <select id="claim_type" required>
+                    <option value="" disabled selected>Select a category...</option>
+                    <option value="Insurance Claim">Insurance Claim (Accident)</option>
+                    <option value="Full Paint">Full Vehicle Paint / Color Match</option>
+                    <option value="Minor Collision">Minor Collision (Self-Pay)</option>
+                    <option value="Bumper Repair">Bumper or Trim Repair</option>
+                </select>
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+
+                <label for="phone">Contact Phone</label>
+                <input type="tel" id="phone" placeholder="Cell phone for text alerts" required>
+
+                <label for="zip_code">Local Zip Code</label>
+                <input type="text" id="zip_code" value="85901" required>
+
+                <label for="vehicle">Vehicle Information</label>
+                <input type="text" id="vehicle" placeholder="e.g. 2022 Chevy Silverado" required>
+
+                <label for="notes">Damage Details & Notes</label>
+                <textarea id="notes" rows="4" placeholder="Briefly describe the damage or insurance info..."></textarea>
+
+                <ul class="trust-list">
+                    <li><strong>Direct Billing:</strong> We assist with all insurance providers.</li>
+                    <li><strong>Verified Network:</strong> Connecting you to the best shops in Show Low.</li>
+                </ul>
+
+                <button type="submit" id="submitBtn" class="submit-btn">SEND TO COLLISION SPECIALIST</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="seo-footer">
+        <p><strong>Theory Solutions Automotive Division:</strong> Serving Show Low, Pinetop, Taylor, and Snowflake.</p>
+        <p>© 2026 Theory Solutions. All Rights Reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
