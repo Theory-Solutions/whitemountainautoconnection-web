@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://whitemountainautoconnections.com/</loc></url>
-  <url><loc>https://whitemountainautoconnections.com/paintless-dent-repair-show-low</loc></url>
+  <url>
+    <loc>https://whitemountainautoconnections.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://whitemountainautoconnections.com/paintless-dent-repair-show-low-pinetop</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://whitemountainautoconnections.com/collision-repair.html</loc>
+    <priority>0.9</priority>
+  </url>
+
   <url><loc>https://whitemountainautoconnections.com/dent-removal-pinetop-az</loc></url>
   <url><loc>https://whitemountainautoconnections.com/mobile-dent-repair-lakeside</loc></url>
 </urlset>

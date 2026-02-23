@@ -10,111 +10,68 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>White Mountain Auto Connections | Show Low & Pinetop Paintless Dent Repair</title>
-    
-    <script>
-        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-            window.history.replaceState({}, '', '/paintless-dent-repair-show-low-pinetop');
-        }
-    </script>
-
+    <title>Show Low Paintless Dent Repair | Local Specialist Network</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Mobile-friendly Header Button */
-        .collision-header-btn {
-            display: inline-block;
-            margin-top: 15px;
-            background-color: #e63946; /* Matches your accent red */
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 50px; /* Pill shape for "nav" feel */
-            font-weight: bold;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            border: 2px solid white;
-            transition: 0.3s;
-        }
-        .collision-header-btn:hover {
-            background-color: white;
-            color: #1a3044;
-        }
-    </style>
 </head>
 <body>
 
-    <header>
-        <h1>White Mountain Auto Connections</h1>
-        <p>Expert Mobile Dent Repair & Hail Specialist</p>
-        
-        <a href="collision-repair.html" class="collision-header-btn">Need Collision or Paint Repair?</a>
+    <header style="background: #1a3044; color: white; padding: 50px 20px; text-align: center;">
+        <h1 style="font-size: 2.2rem; margin-bottom: 10px;">Show Low Paintless Dent Repair</h1>
+        <p style="font-size: 1.1rem; max-width: 700px; margin: auto; opacity: 0.9;">
+            Specialized dent removal with no paint, no fillers, and 100% factory finish retention.
+        </p>
+        <a href="collision-repair.html" style="display: inline-block; margin-top: 20px; background-color: #e63946; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; font-weight: bold; border: 2px solid white;">Need Collision or Paint?</a>
     </header>
 
     <main>
-        <section id="about">
-            <h2>We Do the Leg Work For You</h2>
-            <p>Don't waste days calling shops and waiting for callbacks. We are a <strong>local connection network</strong> that matches your specific damage with the best available <strong>Paintless Dent Repair</strong> specialist in the White Mountains.</p>
-            
-            <div style="margin: 20px 0; border-left: 4px solid #e63946; padding-left: 15px;">
-                <h3 style="margin-top:0;">What is Paintless Dent Repair?</h3>
-                <p style="font-size: 0.95rem; color: #334155;">It is a specialized process that uses custom tools to gently massage dents out from the <em>inside</em> of your vehicle's panels. Because we don't use sandpaper, body filler, or new paint, your car keeps its <strong>original factory finish</strong> and value.</p>
-            </div>
+        <section style="padding: 40px 20px; text-align: center; background: #f8fafc;">
+            <h2 style="color: #1a3044;">We Do The Leg Work For You</h2>
+            <p style="max-width: 600px; margin: auto; font-size: 1rem; line-height: 1.6;">
+                Stop waiting for shop callbacks. We match your damage with the best available <strong>PDR specialists</strong> in the White Mountains so you don't have to.
+            </p>
+        </section>
 
-            <div style="margin-top: 15px; background: #f1f5f9; padding: 15px; border-radius: 8px; font-size: 0.9rem;">
-                <p><strong>✓ Door Dings & Creases:</strong> Fast mobile service at your home or office.</p>
-                <p><strong>✓ Hail Damage:</strong> Specialized repair that keeps your factory paint 100% intact.</p>
-                <p><strong>✓ Quality Guaranteed:</strong> We only work with verified, high-end technicians.</p>
+        <section id="lead-section" style="padding: 20px; max-width: 500px; margin: auto;">
+            <div style="background: white; border: 2px solid #1a3044; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <h2 style="margin-top: 0; text-align: center;">Get Your Free Estimate</h2>
+                <form id="lead-form">
+                    <div style="display:none;"><input type="text" id="hp_email"></div>
+                    <input type="text" id="customer_name" placeholder="Name" required style="width:100%; padding:12px; margin-bottom:10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="tel" id="phone" placeholder="Mobile Phone" required style="width:100%; padding:12px; margin-bottom:10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <input type="text" id="zip_code" placeholder="Zip Code" required style="width:100%; padding:12px; margin-bottom:10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <textarea id="notes" placeholder="Year/Make/Model & Damage Info" style="width:100%; padding:12px; margin-bottom:15px; border: 1px solid #ccc; border-radius: 4px; height: 80px;"></textarea>
+                    <button type="submit" id="submitBtn" style="width:100%; padding:15px; background:#e63946; color:white; border:none; border-radius: 4px; font-weight:bold; cursor: pointer;">CONNECT & GET ESTIMATE</button>
+                </form>
+                <p style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 15px;">
+                    <strong>Privacy:</strong> We are a referral network. All PII is deleted within 7 days.
+                </p>
             </div>
         </section>
 
-        <section id="calculator">
-            <h2>Ballpark Repair Estimator</h2>
-            <label for="dentSize">Type of Damage</label>
-            <select id="dentSize">
-                <option value="75">Small Ding (Dime Size)</option>
-                <option value="150">Medium Dent (Golf Ball)</option>
-                <option value="300">Large Dent (Baseball)</option>
-                <option value="500">Hail Damage (Multiple Panels)</option>
-            </select>
-
-            <label for="panelType">Panel Material/Location</label>
-            <select id="panelType">
-                <option value="1.0">Steel Door or Fender</option>
-                <option value="1.5">Hood, Roof, or Trunk</option>
-                <option value="2.0">Aluminum or Sharp Body Line</option>
-            </select>
-
-            <div class="result-box">
-                <p>Estimated Specialist Range:</p>
-                <h3 id="priceRange">$75 - $125</h3>
+        <section style="background: #eee; padding: 40px 20px; text-align: center; margin-top: 40px;">
+            <h3>Curious about the price?</h3>
+            <p style="margin-bottom: 20px;">Check out our ballpark estimator below:</p>
+            <div style="max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 8px;">
+                <label style="display:block; margin-bottom:5px; font-weight:bold;">Dent Size</label>
+                <select id="dentSize" style="width:100%; padding:10px; margin-bottom:15px;">
+                    <option value="75">Small Ding (Dime)</option>
+                    <option value="150">Medium Dent (Golf Ball)</option>
+                    <option value="300">Large Dent (Baseball)</option>
+                </select>
+                <label style="display:block; margin-bottom:5px; font-weight:bold;">Panel Location</label>
+                <select id="panelType" style="width:100%; padding:10px; margin-bottom:15px;">
+                    <option value="1.0">Standard Door/Fender</option>
+                    <option value="1.5">Hood/Roof (Complex)</option>
+                </select>
+                <p>Ballpark Range:</p>
+                <h2 id="priceRange" style="color: #e63946; margin: 0;">$75 - $112</h2>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="margin-top: 15px; background: none; border: 1px solid #1a3044; padding: 8px 15px; cursor: pointer; border-radius: 4px;">Ready for a real quote?</button>
             </div>
-            <button onclick="document.getElementById('lead-section').scrollIntoView({behavior:'smooth'})">Get My Mobile Quote</button>
-        </section>
-
-        <section id="lead-section">
-            <h2>Request Your Local Specialist</h2>
-            <form id="lead-form">
-                <div style="display:none;"><input type="text" id="hp_email"></div>
-                <input type="text" id="customer_name" placeholder="Your Name" required>
-                <input type="tel" id="phone" placeholder="Mobile Phone (For Text Quote)" required>
-                <input type="text" id="zip_code" placeholder="Zip Code (85901, 85929, etc)" required>
-                <textarea id="notes" placeholder="Year/Make/Model? Is it hail damage or a single dent?"></textarea>
-                <button type="submit" id="submitBtn">Send to Specialist</button>
-            </form>
         </section>
     </main>
 
-    <footer>
-        <div class="legal-claims">
-            <p><strong>Theory Solutions Platform:</strong> We are a referral network. Repairs are performed by independent local specialists. Estimates are preliminary until verified by a technician.</p>
-        </div>
-        <div class="network-links">
-            <a href="/">Home</a> | 
-            <a href="collision-repair.html">Collision & Paint</a> | 
-            <a href="https://theory-solutions.com">Theory Solutions Hub</a> | 
-            <a href="privacy-policy.html">Privacy Policy</a>
-        </div>
-        <p style="margin-top:15px;">&copy; 2026 Theory Solutions | 7344 E 20th St, Tucson, AZ</p>
+    <footer style="padding: 30px; text-align: center; background: #1a3044; color: white; font-size: 0.8rem;">
+        <p>&copy; 2026 Theory Solutions | 7344 E 20th St, Tucson, AZ</p>
     </footer>
 
     <script src="script.js"></script>
