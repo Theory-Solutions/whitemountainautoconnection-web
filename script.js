@@ -1,6 +1,6 @@
 // --- THEORY SOLUTIONS: PRODUCTION DISPATCH & CALCULATOR ---
 
-// 1. CALCULATOR LOGIC (Curiosity check)
+// 1. CALCULATOR LOGIC
 const dSize = document.getElementById('dentSize');
 const pType = document.getElementById('panelType');
 const pRange = document.getElementById('priceRange');
@@ -22,10 +22,16 @@ const submitBtn = document.getElementById('submitBtn');
 if (leadForm) {
     leadForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+        
+        // Honeypot check for bots
         if (document.getElementById('hp_email').value !== "") return;
 
+        // Clean phone number
         const rawPhone = document.getElementById('phone').value.replace(/\D/g, '');
-        if (rawPhone.length !== 10) { alert("Please enter 10 digits."); return; }
+        if (rawPhone.length !== 10) { 
+            alert("Please enter a valid 10-digit phone number."); 
+            return; 
+        }
 
         submitBtn.disabled = true;
         submitBtn.innerText = "Finding Specialist...";
@@ -47,14 +53,22 @@ if (leadForm) {
             });
 
             if (response.ok) {
+                // GOOGLE ADS CONVERSION TRACKING
                 if (typeof gtag === 'function') {
-                    gtag('event', 'conversion', { 'send_to': 'AW-17963694572', 'value': 20.0, 'currency': 'USD' });
+                    gtag('event', 'conversion', { 
+                        'send_to': 'AW-17963694572', 
+                        'value': 20.0, 
+                        'currency': 'USD' 
+                    });
                 }
-                alert("Success! A local specialist will text you shortly. Data purged in 7 days.");
+                
+                alert("Success! Our Show Low specialist will text you shortly to get photos. Remember, all data is purged in 7 days.");
                 leadForm.reset();
+            } else {
+                alert("The system is busy. Please try again or call us.");
             }
         } catch (err) {
-            alert("Connection error.");
+            alert("Connection error. Please check your signal.");
         } finally {
             submitBtn.disabled = false;
             submitBtn.innerText = "CONNECT & GET ESTIMATE";
