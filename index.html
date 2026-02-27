@@ -10,69 +10,135 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show Low Paintless Dent Repair | Local Specialist Network</title>
+    
+    <title>Paintless Auto Dent Repair Show Low | Car Ding Removal Near Me</title>
+    <meta name="description" content="Professional car dent repair in Show Low & Pinetop. Specialists in vehicle hail damage and paintless auto dent repair. Get a free text estimate today.">
+
+    <style>
+        /* CHATBOT BOX STYLING */
+        #bot-container {
+            position: fixed; bottom: 90px; right: 20px; width: 340px;
+            background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            display: none; flex-direction: column; overflow: hidden; z-index: 9999;
+            font-family: sans-serif;
+        }
+        #chat-header {
+            background: #1a3044; color: white; padding: 12px 15px; 
+            font-weight: bold; display: flex; align-items: center; justify-content: space-between;
+        }
+        #chat-header-info { display: flex; align-items: center; gap: 10px; }
+        #bot-logo { width: 24px; height: 24px; border-radius: 4px; object-fit: contain; background: white; }
+        
+        #chat-box { 
+            height: 350px; padding: 15px; overflow-y: auto; 
+            background: #f1f5f9; display: flex; flex-direction: column;
+        }
+        .bot-msg, .user-msg { 
+            max-width: 85%; padding: 10px 14px; border-radius: 18px; 
+            margin-bottom: 12px; font-size: 0.95rem; line-height: 1.4;
+        }
+        .bot-msg { background: #fff; color: #333; align-self: flex-start; border-bottom-left-radius: 2px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .user-msg { background: #28A745; color: white; align-self: flex-end; border-bottom-right-radius: 2px; }
+        
+        #chat-input-container { 
+            padding: 15px; border-top: 1px solid #e2e8f0; 
+            display: flex; flex-wrap: wrap; gap: 8px; background: white;
+        }
+        .chat-btn { 
+            background: #1a3044; color: white; border: none; 
+            padding: 10px 18px; border-radius: 25px; cursor: pointer; font-weight: 600;
+        }
+        .chat-btn.grey { background: #94a3b8; }
+        
+        #bot-field-input { flex: 1; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; }
+        .send-btn { background: #28A745; color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; }
+
+        /* LAUNCHER & LAYOUT */
+        #bot-launcher {
+            position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; 
+            background: #28A745; border-radius: 50%; display: flex; 
+            align-items: center; justify-content: center; cursor: pointer; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9998;
+        }
+        .before-after-flex { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; max-width: 900px; margin: auto; }
+        .image-container { flex: 1; min-width: 300px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="margin:0; font-family: sans-serif; color: #333;">
 
     <header style="background: #1a3044; color: white; padding: 50px 20px; text-align: center;">
-        <h1 style="font-size: 2.2rem; margin-bottom: 10px;">Show Low Paintless Dent Repair</h1>
+        <h1 style="font-size: 2.2rem; margin-bottom: 10px;">Paintless Auto Dent Repair in Show Low</h1>
         <p style="font-size: 1.1rem; max-width: 700px; margin: auto; opacity: 0.9;">
-            Specialized dent removal with no paint, no fillers, and 100% factory finish retention.
+            Specialized <strong>car dent repair near me</strong>. Restore your factory finish without paint or fillers.
         </p>
-        <a href="collision-repair.html" style="display: inline-block; margin-top: 20px; background-color: #e63946; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; font-weight: bold; border: 2px solid white;">Need Collision or Paint?</a>
+        <a href="collision-repair.html" style="display: inline-block; margin-top: 20px; background-color: #e63946; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; font-weight: bold; border: 2px solid white;">Need Automobile Body Shops?</a>
     </header>
 
     <main>
-        <section style="padding: 40px 20px; text-align: center; background: #f8fafc;">
-            <h2 style="color: #1a3044;">We Do The Leg Work For You</h2>
-            <p style="max-width: 600px; margin: auto; font-size: 1rem; line-height: 1.6;">
-                Stop waiting for shop callbacks. We match your damage with the best available <strong>PDR specialists</strong> in the White Mountains so you don't have to.
-            </p>
-        </section>
-
-        <section id="lead-section" style="padding: 20px; max-width: 500px; margin: auto;">
-            <div style="background: white; border: 2px solid #1a3044; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                <h2 style="margin-top: 0; text-align: center;">Get Your Free Estimate</h2>
-                <form id="lead-form">
-                    <div style="display:none;"><input type="text" id="hp_email"></div>
-                    <input type="text" id="customer_name" placeholder="Name" required style="width:100%; padding:12px; margin-bottom:10px; border: 1px solid #ccc; border-radius: 4px;">
-                    <input type="tel" id="phone" placeholder="Mobile Phone" required style="width:100%; padding:12px; margin-bottom:10px; border: 1px solid #ccc; border-radius: 4px;">
-                    <input type="text" id="zip_code" placeholder="Zip Code" required style="width:100%; padding:12px; margin-bottom:10px; border: 1px solid #ccc; border-radius: 4px;">
-                    <textarea id="notes" placeholder="Year/Make/Model & Damage Info" style="width:100%; padding:12px; margin-bottom:15px; border: 1px solid #ccc; border-radius: 4px; height: 80px;"></textarea>
-                    <button type="submit" id="submitBtn" style="width:100%; padding:15px; background:#e63946; color:white; border:none; border-radius: 4px; font-weight:bold; cursor: pointer;">CONNECT & GET ESTIMATE</button>
-                </form>
-                <p style="font-size: 0.75rem; color: #666; text-align: center; margin-top: 15px;">
-                    <strong>Privacy:</strong> We are a referral network. All PII is deleted within 7 days.
-                </p>
+        <section style="padding: 40px 20px; text-align: center; background: white;">
+            <h2 style="color: #1a3044;">Professional PDR Results</h2>
+            <div class="before-after-flex">
+                <div class="image-container">
+                    <img src="before-image.jpg" alt="Before PDR Repair" style="width:100%;">
+                    <p style="padding: 8px; background: #f1f5f9; margin: 0; font-size: 0.8rem; font-weight: bold;">BEFORE</p>
+                </div>
+                <div class="image-container">
+                    <img src="after-image.jpg" alt="After PDR Repair" style="width:100%;">
+                    <p style="padding: 8px; background: #f1f5f9; margin: 0; font-size: 0.8rem; font-weight: bold;">AFTER</p>
+                </div>
             </div>
         </section>
 
-        <section style="background: #eee; padding: 40px 20px; text-align: center; margin-top: 40px;">
+        <section style="padding: 40px 20px; text-align: center; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+            <h2 style="color: #1a3044;">We Do The Leg Work For You</h2>
+            <p style="max-width: 600px; margin: auto; font-size: 1rem; line-height: 1.6;">
+                Don't waste days calling around. We connect you with the best available <strong>PDR specialists</strong> and <strong>automobile body shops</strong> in the White Mountains.
+            </p>
+        </section>
+
+        <section style="background: #eee; padding: 60px 20px; text-align: center;">
             <h3>Curious about the price?</h3>
-            <p style="margin-bottom: 20px;">Check out our ballpark estimator below:</p>
-            <div style="max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 8px;">
+            <div style="max-width: 400px; margin: auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
                 <label style="display:block; margin-bottom:5px; font-weight:bold;">Dent Size</label>
-                <select id="dentSize" style="width:100%; padding:10px; margin-bottom:15px;">
+                <select id="dentSize" style="width:100%; padding:10px; margin-bottom:15px; border-radius: 4px; border: 1px solid #ccc;">
                     <option value="75">Small Ding (Dime)</option>
                     <option value="150">Medium Dent (Golf Ball)</option>
                     <option value="300">Large Dent (Baseball)</option>
                 </select>
                 <label style="display:block; margin-bottom:5px; font-weight:bold;">Panel Location</label>
-                <select id="panelType" style="width:100%; padding:10px; margin-bottom:15px;">
+                <select id="panelType" style="width:100%; padding:10px; margin-bottom:15px; border-radius: 4px; border: 1px solid #ccc;">
                     <option value="1.0">Standard Door/Fender</option>
                     <option value="1.5">Hood/Roof (Complex)</option>
                 </select>
                 <p>Ballpark Range:</p>
                 <h2 id="priceRange" style="color: #e63946; margin: 0;">$75 - $112</h2>
-                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" style="margin-top: 15px; background: none; border: 1px solid #1a3044; padding: 8px 15px; cursor: pointer; border-radius: 4px;">Ready for a real quote?</button>
+                <button onclick="openBot()" style="margin-top: 15px; background: #1a3044; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold;">Get Real Quote</button>
             </div>
         </section>
     </main>
 
     <footer style="padding: 30px; text-align: center; background: #1a3044; color: white; font-size: 0.8rem;">
-        <p>&copy; 2026 Theory Solutions | 7344 E 20th St, Tucson, AZ</p>
+        <p>&copy; 2026 Theory Solutions | 7344 E 20th St, Tucson, AZ | Serving Show Low, AZ</p>
     </footer>
+
+    <div id="bot-launcher" onclick="openBot()">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2 22l5-1.338C8.47 21.513 10.179 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.474 0-2.85-.387-4.04-1.06l-2.435.652.652-2.435C5.387 14.85 5 13.474 5 12c0-3.859 3.141-7 7-7s7 3.141 7 7-3.141 7-7 7z"/></svg>
+    </div>
+
+    <div style="display:none;"><input type="text" id="hp_email_bot"></div>
+
+    <div id="bot-container">
+        <div id="chat-header">
+            <div id="chat-header-info">
+                <img src="logo.png" alt="Logo" id="bot-logo">
+                <span>Estimate Assistant</span>
+            </div>
+            <button onclick="closeBot()" style="background:none; color:white; border:none; cursor:pointer; font-size:1.5rem;">&times;</button>
+        </div>
+        <div id="chat-box"></div>
+        <div id="chat-input-container"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>

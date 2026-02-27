@@ -1,7 +1,8 @@
 /* 1. BRANDING & MOBILE-FIRST RESET */
 :root {
-    --theory-blue: #1a365d;
+    --theory-blue: #1a3044;
     --accent-red: #e63946;
+    --accent-green: #28A745;
     --bg-light: #f1f5f9;
 }
 
@@ -14,7 +15,7 @@ body {
     color: #1e293b;
 }
 
-/* 2. THE BLUE HEADER */
+/* 2. THE BRANDED HEADER */
 header { 
     background-color: var(--theory-blue); 
     color: white; 
@@ -25,62 +26,114 @@ header {
 
 header h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
 
-/* 3. MAIN CARD (The "Tunnel" Look) */
+/* 3. MAIN CONTENT CARD */
 main { 
-    max-width: 550px; 
+    max-width: 900px; 
     margin: -1.5rem auto 2rem; 
     background: white; 
     padding: 2rem; 
     border-radius: 12px; 
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    width: 92%; /* Side spacing for mobile */
+    width: 92%; 
 }
 
-/* 4. SECTION SPACING */
-section { margin-bottom: 2.5rem; }
-h2 { 
-    font-size: 1.25rem; 
-    color: var(--theory-blue); 
-    margin-bottom: 1.25rem; 
-    border-bottom: 2px solid #f1f5f9; 
-    padding-bottom: 0.5rem; 
+/* 4. SIDE-BY-SIDE IMAGES (The "Flesh" Fix) */
+.before-after-flex { 
+    display: flex; 
+    flex-direction: row; /* Forces horizontal alignment */
+    align-items: stretch; /* Ensures both boxes are same height */
+    gap: 15px; 
+    justify-content: center; 
+    margin: 20px 0;
 }
 
-/* 5. INPUTS (Preventing iPhone Zoom) */
-label { display: block; margin-top: 1.25rem; font-weight: 600; font-size: 0.85rem; color: #475569; }
-select, input, textarea { 
-    width: 100%; 
-    padding: 0.85rem; 
-    margin-top: 0.5rem; 
-    border: 1px solid #cbd5e0; 
+.image-container { 
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    min-width: 280px; 
+    border: 1px solid #ddd; 
     border-radius: 8px; 
-    font-size: 16px; /* Essential for mobile friendliness */
+    overflow: hidden; 
+    background: #fff;
 }
 
-/* 6. THE RESULTS BOX */
-.result-box { 
-    background: #f0fdf4; 
-    border: 2px dashed #22c55e; 
-    padding: 1.5rem; 
-    text-align: center; 
-    margin: 2rem 0; 
-    border-radius: 10px; 
-}
-#priceRange { color: #15803d; font-size: 2.25rem; font-weight: 800; }
-
-/* 7. BUTTONS */
-button { 
+.image-container img { 
     width: 100%; 
-    padding: 1.15rem; 
-    background-color: var(--accent-red); 
+    height: 350px; /* Adjust this to match your photo aspect ratio */
+    object-fit: cover; /* Prevents stretching by cropping edges */
+    display: block; 
+}
+
+.image-label {
+    padding: 8px; 
+    background: #f1f5f9; 
+    margin: 0; 
+    font-size: 0.8rem; 
+    font-weight: bold; 
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+/* 5. ESTIMATE ASSISTANT BOT CONTAINER */
+#bot-container {
+    position: fixed; bottom: 90px; right: 20px; width: 340px;
+    background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    display: none; flex-direction: column; overflow: hidden; z-index: 9999;
+}
+
+#chat-header {
+    background: var(--theory-blue); 
     color: white; 
-    border: none; 
-    border-radius: 8px; 
-    font-size: 1.1rem; 
-    font-weight: 700; 
-    cursor: pointer; 
+    padding: 12px 15px; 
+    font-weight: bold; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; /* Fixes "X" to far right */
 }
 
-/* 8. FOOTER */
-footer { text-align: center; padding: 2rem 1.5rem; font-size: 0.8rem; color: #64748b; }
-.network-links a { color: var(--theory-blue); text-decoration: none; font-weight: 700; margin: 0 8px; }
+#chat-header-info { display: flex; align-items: center; gap: 10px; }
+#bot-logo { width: 24px; height: 24px; border-radius: 4px; object-fit: contain; background: white; }
+
+#chat-box { 
+    height: 350px; padding: 15px; overflow-y: auto; 
+    background: #f1f5f9; display: flex; flex-direction: column;
+}
+
+/* 6. CHAT BUBBLES */
+.bot-msg, .user-msg { 
+    max-width: 85%; padding: 10px 14px; border-radius: 18px; 
+    margin-bottom: 12px; font-size: 0.95rem; line-height: 1.4;
+}
+.bot-msg { background: #fff; color: #333; align-self: flex-start; border-bottom-left-radius: 2px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.user-msg { background: var(--accent-green); color: white; align-self: flex-end; border-bottom-right-radius: 2px; }
+
+/* 7. CHAT INPUTS & BUTTONS */
+#chat-input-container { 
+    padding: 15px; border-top: 1px solid #e2e8f0; 
+    display: flex; flex-wrap: wrap; gap: 8px; background: white;
+}
+.chat-btn { 
+    background: var(--theory-blue); color: white; border: none; 
+    padding: 10px 18px; border-radius: 25px; cursor: pointer; font-weight: 600;
+}
+.chat-btn.grey { background: #94a3b8; }
+
+#bot-field-input { flex: 1; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; font-size: 16px; }
+.send-btn { background: var(--accent-green); color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; }
+
+/* 8. FLOATING LAUNCHER ICON */
+#bot-launcher {
+    position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; 
+    background: var(--accent-green); border-radius: 50%; display: flex; 
+    align-items: center; justify-content: center; cursor: pointer; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9998;
+}
+
+/* 9. CALCULATOR & FOOTER */
+.calc-box { 
+    background: #fff; border: 2px solid var(--theory-blue); 
+    padding: 25px; border-radius: 12px; margin: 2rem 0;
+}
+#priceRange { color: var(--accent-red); font-size: 2.25rem; font-weight: 800; }
+footer { text-align: center; padding: 2rem; background: var(--theory-blue); color: white; font-size: 0.8rem; }
