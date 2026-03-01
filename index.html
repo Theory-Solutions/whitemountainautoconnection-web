@@ -1,145 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17963694572"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17963694572');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Paintless Auto Dent Repair Show Low | Car Ding Removal Near Me</title>
-    <meta name="description" content="Professional car dent repair in Show Low & Pinetop. Specialists in vehicle hail damage and paintless auto dent repair. Get a free text estimate today.">
-
-    <style>
-        /* CHATBOT BOX STYLING */
-        #bot-container {
-            position: fixed; bottom: 90px; right: 20px; width: 340px;
-            background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-            display: none; flex-direction: column; overflow: hidden; z-index: 9999;
-            font-family: sans-serif;
-        }
-        #chat-header {
-            background: #1a3044; color: white; padding: 12px 15px; 
-            font-weight: bold; display: flex; align-items: center; justify-content: space-between;
-        }
-        #chat-header-info { display: flex; align-items: center; gap: 10px; }
-        #bot-logo { width: 24px; height: 24px; border-radius: 4px; object-fit: contain; background: white; }
-        
-        #chat-box { 
-            height: 350px; padding: 15px; overflow-y: auto; 
-            background: #f1f5f9; display: flex; flex-direction: column;
-        }
-        .bot-msg, .user-msg { 
-            max-width: 85%; padding: 10px 14px; border-radius: 18px; 
-            margin-bottom: 12px; font-size: 0.95rem; line-height: 1.4;
-        }
-        .bot-msg { background: #fff; color: #333; align-self: flex-start; border-bottom-left-radius: 2px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .user-msg { background: #28A745; color: white; align-self: flex-end; border-bottom-right-radius: 2px; }
-        
-        #chat-input-container { 
-            padding: 15px; border-top: 1px solid #e2e8f0; 
-            display: flex; flex-wrap: wrap; gap: 8px; background: white;
-        }
-        .chat-btn { 
-            background: #1a3044; color: white; border: none; 
-            padding: 10px 18px; border-radius: 25px; cursor: pointer; font-weight: 600;
-        }
-        .chat-btn.grey { background: #94a3b8; }
-        
-        #bot-field-input { flex: 1; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; }
-        .send-btn { background: #28A745; color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; }
-
-        /* LAUNCHER & LAYOUT */
-        #bot-launcher {
-            position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; 
-            background: #28A745; border-radius: 50%; display: flex; 
-            align-items: center; justify-content: center; cursor: pointer; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9998;
-        }
-        .before-after-flex { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; max-width: 900px; margin: auto; }
-        .image-container { flex: 1; min-width: 300px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
-    </style>
+    <title>White Mountain Auto Connections | Show Low Service Hub</title>
+    <meta name="description" content="Show Low's premier hub for Paintless Dent Repair, Collision, and Detailing. Expert PDR repair, hail damage repair, and car dent removal near me.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .service-tile {
+            position: relative; cursor: pointer; overflow: hidden; border-radius: 12px; height: 280px;
+            display: flex; align-items: flex-end; background-size: cover; background-position: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .service-tile:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+        .tile-overlay { background: linear-gradient(to top, rgba(26, 48, 68, 0.95) 15%, rgba(0,0,0,0.2)); width: 100%; padding: 25px 15px; color: white; text-align: center; }
+        .about-section { padding: 60px 20px; max-width: 900px; margin: auto; text-align: center; line-height: 1.8; }
+        .hub-bold { font-weight: bold; color: #1a3044; }
+    </style>
 </head>
-<body style="margin:0; font-family: sans-serif; color: #333;">
-
-    <header style="background: #1a3044; color: white; padding: 50px 20px; text-align: center;">
-        <h1 style="font-size: 2.2rem; margin-bottom: 10px;">Paintless Auto Dent Repair in Show Low</h1>
-        <p style="font-size: 1.1rem; max-width: 700px; margin: auto; opacity: 0.9;">
-            Specialized <strong>car dent repair near me</strong>. Restore your factory finish without paint or fillers.
-        </p>
-        <a href="collision-repair.html" style="display: inline-block; margin-top: 20px; background-color: #e63946; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; font-weight: bold; border: 2px solid white;">Need Automobile Body Shops?</a>
+<body>
+    <header>
+        <h1>🏔️ White Mountain Auto Connections</h1>
+        <p>The White Mountains' Premier Automotive Repair & Restoration Network</p>
     </header>
-
     <main>
-        <section style="padding: 40px 20px; text-align: center; background: white;">
-            <h2 style="color: #1a3044;">Professional PDR Results</h2>
-            <div class="before-after-flex">
-                <div class="image-container">
-                    <img src="before-image.jpg" alt="Before PDR Repair" style="width:100%;">
-                    <p style="padding: 8px; background: #f1f5f9; margin: 0; font-size: 0.8rem; font-weight: bold;">BEFORE</p>
-                </div>
-                <div class="image-container">
-                    <img src="after-image.jpg" alt="After PDR Repair" style="width:100%;">
-                    <p style="padding: 8px; background: #f1f5f9; margin: 0; font-size: 0.8rem; font-weight: bold;">AFTER</p>
-                </div>
-            </div>
-        </section>
-
-        <section style="padding: 40px 20px; text-align: center; background: #f8fafc; border-top: 1px solid #e2e8f0;">
-            <h2 style="color: #1a3044;">We Do The Leg Work For You</h2>
-            <p style="max-width: 600px; margin: auto; font-size: 1rem; line-height: 1.6;">
-                Don't waste days calling around. We connect you with the best available <strong>PDR specialists</strong> and <strong>automobile body shops</strong> in the White Mountains.
+        <section class="about-section">
+            <h2 style="color: var(--theory-blue); margin-bottom: 20px;">Established for the Mountain Community</h2>
+            <p style="font-size: 1.1rem; color: #4a5568;">
+                Established to bridge the gap between mountain residents and elite automotive specialists, <span class="hub-bold">White Mountain Auto Connections</span> was founded on a simple mission: providing a seamless connection point for Show Low homeowners to find the area's best pros. Whether you are searching for the <span class="hub-bold">best paintless dent repair near me</span>, need a reliable <span class="hub-bold">automobile body shop</span>, or specialized <span class="hub-bold">hail damage repair</span>, we do the legwork for you.
             </p>
         </section>
 
-        <section style="background: #eee; padding: 60px 20px; text-align: center;">
-            <h3>Curious about the price?</h3>
-            <div style="max-width: 400px; margin: auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                <label style="display:block; margin-bottom:5px; font-weight:bold;">Dent Size</label>
-                <select id="dentSize" style="width:100%; padding:10px; margin-bottom:15px; border-radius: 4px; border: 1px solid #ccc;">
-                    <option value="75">Small Ding (Dime)</option>
-                    <option value="150">Medium Dent (Golf Ball)</option>
-                    <option value="300">Large Dent (Baseball)</option>
-                </select>
-                <label style="display:block; margin-bottom:5px; font-weight:bold;">Panel Location</label>
-                <select id="panelType" style="width:100%; padding:10px; margin-bottom:15px; border-radius: 4px; border: 1px solid #ccc;">
-                    <option value="1.0">Standard Door/Fender</option>
-                    <option value="1.5">Hood/Roof (Complex)</option>
-                </select>
-                <p>Ballpark Range:</p>
-                <h2 id="priceRange" style="color: #e63946; margin: 0;">$75 - $112</h2>
-                <button onclick="openBot()" style="margin-top: 15px; background: #1a3044; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold;">Get Real Quote</button>
+        <div class="before-after-flex" style="flex-wrap: wrap; gap: 20px; justify-content: center;">
+            <div class="service-tile" onclick="location.href='pdr-repair.html'" style="background-image: url('pic4.jpg'); border-bottom: 6px solid #28A745; flex: 1 1 280px;">
+                <div class="tile-overlay">
+                    <h3 style="margin:0;">🔨 PDR & Dents</h3>
+                    <p style="font-size: 0.85rem; margin: 8px 0;"><strong>Mobile paintless dent repair near me</strong>.</p>
+                    <span style="color: #28A745; font-weight: bold;">View Results →</span>
+                </div>
             </div>
-        </section>
+            <div class="service-tile" onclick="location.href='collision-repair.html'" style="background-image: url('https://images.unsplash.com/photo-1486006920555-c77dcf18193c?q=80&w=2106&auto=format&fit=crop'); border-bottom: 6px solid #d32f2f; flex: 1 1 280px;">
+                <div class="tile-overlay">
+                    <h3 style="margin:0;">🚗 Collision & Paint</h3>
+                    <p style="font-size: 0.85rem; margin: 8px 0;">Full <strong>body collision shop</strong> triage.</p>
+                    <span style="color: #d32f2f; font-weight: bold;">Get Assessment →</span>
+                </div>
+            </div>
+            <div class="service-tile" onclick="location.href='car-detailing.html'" style="background-image: url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=2071&auto=format&fit=crop'); border-bottom: 6px solid #3498db; flex: 1 1 280px;">
+                <div class="tile-overlay">
+                    <h3 style="margin:0;">✨ Pro Detailing</h3>
+                    <p style="font-size: 0.85rem; margin: 8px 0;"><strong>Ceramic coating Pinetop</strong> restoration.</p>
+                    <span style="color: #3498db; font-weight: bold;">Book Detail →</span>
+                </div>
+            </div>
+            <div class="service-tile" onclick="location.href='glass-repair.html'" style="background-image: url('https://images.unsplash.com/photo-1551522435-a13afa10f103?q=80&w=2070&auto=format&fit=crop'); border-bottom: 6px solid #f1c40f; flex: 1 1 280px;">
+                <div class="tile-overlay">
+                    <h3 style="margin:0;">💎 Glass & Rock Chips</h3>
+                    <p style="font-size: 0.85rem; margin: 8px 0;"><strong>Windshield rock chip repair</strong> triage.</p>
+                    <span style="color: #f1c40f; font-weight: bold;">Fix Chip →</span>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <footer style="padding: 30px; text-align: center; background: #1a3044; color: white; font-size: 0.8rem;">
-        <p>&copy; 2026 Theory Solutions | 7344 E 20th St, Tucson, AZ | Serving Show Low, AZ</p>
+    <footer>
+        <p>&copy; 2026 Theory Solutions Automotive | Serving Show Low, AZ</p>
     </footer>
-
     <div id="bot-launcher" onclick="openBot()">
         <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2 22l5-1.338C8.47 21.513 10.179 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.474 0-2.85-.387-4.04-1.06l-2.435.652.652-2.435C5.387 14.85 5 13.474 5 12c0-3.859 3.141-7 7-7s7 3.141 7 7-3.141 7-7 7z"/></svg>
     </div>
-
+    <div id="bot-container"><div id="chat-header"><div id="chat-header-info"><span>White Mountain Dispatch</span></div><button onclick="closeBot()">&times;</button></div><div id="chat-box"></div><div id="chat-input-container"></div></div>
     <div style="display:none;"><input type="text" id="hp_email_bot"></div>
-
-    <div id="bot-container">
-        <div id="chat-header">
-            <div id="chat-header-info">
-                <img src="logo.png" alt="Logo" id="bot-logo">
-                <span>Estimate Assistant</span>
-            </div>
-            <button onclick="closeBot()" style="background:none; color:white; border:none; cursor:pointer; font-size:1.5rem;">&times;</button>
-        </div>
-        <div id="chat-box"></div>
-        <div id="chat-input-container"></div>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>

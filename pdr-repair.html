@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Paintless Dent Repair Near Me | Show Low PDR & Hail Damage</title>
+    <meta name="description" content="Looking for the best paintless dent repair near me in Show Low? Professional pdr repair, hail damage repair, and mobile dent removal for the White Mountains.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="margin:0; font-family: sans-serif; color: #333;">
+
+    <header>
+        <h1>🔨 Show Low PDR & Hail Damage Repair</h1>
+        <p>The <strong>best paintless dent repair near me</strong> in the White Mountains.</p>
+        <a href="index.html" style="color:white; display:block; margin-top:15px; font-size:0.9rem;">← Back to Service Hub</a>
+    </header>
+
+    <main>
+        <section style="padding: 30px 20px; text-align: center; max-width: 800px; margin: auto;">
+            <h2 style="color: var(--theory-blue);">Expert PDR Repair & Dent Removal</h2>
+            <p style="line-height: 1.6; color: #444;">
+                Stop searching for <strong>dentless paint repair near me</strong> and connect with the mountain's only specialist. We provide professional <strong>pdr repair</strong> and <strong>dent removal</strong> that saves your factory finish. Whether you need <strong>hail damage repair</strong> or <strong>mobile paintless dent repair near me</strong>, we restore your car to perfection.
+            </p>
+        </section>
+
+        <section style="padding: 20px 20px; background: #f8fafc;">
+            <h3 style="text-align: center; color: var(--theory-blue); margin-bottom: 20px;">Featured Transformation</h3>
+            <div class="before-after-flex">
+                <div class="image-container">
+                    <img src="before-image.jpg" alt="Original Before PDR">
+                    <p class="image-label">BEFORE</p>
+                </div>
+                <div class="image-container">
+                    <img src="after-image.jpg" alt="Original After PDR">
+                    <p class="image-label">AFTER</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 40px 20px; background: #fff;">
+            <h3 style="text-align: center; color: var(--theory-blue); margin-bottom: 25px;">More Recent Work in Show Low & Pinetop</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1000px; margin: auto;">
+                <div class="image-container"><img src="pic1.jpg" alt="PDR Repair Result" style="width:100%; height:200px; object-fit:cover;"></div>
+                <div class="image-container"><img src="pic2.jpg" alt="Hail Damage Repair" style="width:100%; height:200px; object-fit:cover;"></div>
+                <div class="image-container"><img src="pic3.jpg" alt="Mobile Dent Removal" style="width:100%; height:200px; object-fit:cover;"></div>
+                <div class="image-container"><img src="pic4.jpg" alt="Paintless Dent Pullers Result" style="width:100%; height:200px; object-fit:cover;"></div>
+                <div class="image-container"><img src="pic5.jpg" alt="PDR Repair Show Low" style="width:100%; height:200px; object-fit:cover;"></div>
+                <div class="image-container"><img src="pic6.jpg" alt="Best PDR Near Me" style="width:100%; height:200px; object-fit:cover;"></div>
+                <div class="image-container"><img src="pic7.jpg" alt="Auto Dent Removal" style="width:100%; height:200px; object-fit:cover;"></div>
+            </div>
+        </section>
+
+        <section class="calc-box" style="text-align: center; margin-top: 0;">
+            <h2 style="color: var(--theory-blue);">Instant Dent Repair Estimate</h2>
+            <div style="max-width: 400px; margin: auto; padding: 25px; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                <label style="display:block; margin-bottom:5px; font-weight:bold;">Dent Size</label>
+                <select id="dentSize" style="width:100%; padding:10px; margin-bottom:15px; border-radius: 4px; border: 1px solid #ccc;">
+                    <option value="75">Small Ding (Dime)</option>
+                    <option value="150">Medium Dent (Golf Ball)</option>
+                    <option value="300">Large Crease (Baseball)</option>
+                </select>
+                <p>Ballpark <strong>dent repair near me</strong> price:</p>
+                <h2 id="priceRange" style="color: var(--accent-red); margin: 0;">$75 - $112</h2>
+                <button onclick="openBot('PDR')" class="chat-btn" style="margin-top: 15px; background: var(--theory-blue); color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold; width: 100%;">Get Firm Quote Now</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="bot-launcher" onclick="openBot('PDR')">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2 22l5-1.338C8.47 21.513 10.179 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.474 0-2.85-.387-4.04-1.06l-2.435.652.652-2.435C5.387 14.85 5 13.474 5 12c0-3.859 3.141-7 7-7s7 3.141 7 7-3.141 7-7 7z"/></svg>
+    </div>
+    <div style="display:none;"><input type="text" id="hp_email_bot"></div>
+    <div id="bot-container">
+        <div id="chat-header">
+            <div id="chat-header-info"><span>PDR Estimate Assistant</span></div>
+            <button onclick="closeBot()" style="background:none; color:white; border:none; cursor:pointer; font-size:1.5rem;">&times;</button>
+        </div>
+        <div id="chat-box"></div>
+        <div id="chat-input-container"></div>
+    </div>
+
+    <footer style="padding: 2rem; background: var(--theory-blue); color: white; text-align: center; font-size: 0.8rem;">
+        <p>Expert <strong>hail damage repair</strong> and <strong>dent removal</strong> in Show Low, Pinetop, Lakeside, Snowflake, and Taylor.</p>
+        <p>&copy; 2026 White Mountain Auto Connections | A Theory Solutions Property.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Detailing Show Low | Interior Deep Clean & Paint Protection</title>
+    <meta name="description" content="Professional mobile car detailing in Show Low, AZ. Specializing in interior car deep clean, paint decontamination, and showroom restoration.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .premium-hero { 
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1200'); 
+            background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center; 
+        }
+        .info-section { max-width: 900px; margin: auto; padding: 60px 20px; line-height: 1.8; color: #334155; }
+        .price-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; margin-top: 40px; 
+        }
+        .price-card { 
+            background: #fff; padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;
+        }
+        .price-card h3 { color: #1a3044; margin-bottom: 15px; font-size: 1.4rem; }
+        .amount { display: block; font-size: 2rem; font-weight: 800; color: #1a3044; margin: 15px 0; }
+        .perks { list-style: none; padding: 0; font-size: 0.9rem; text-align: left; }
+        .perks li { margin-bottom: 8px; }
+        .perks li span { color: #28A745; font-weight: bold; margin-right: 8px; }
+    </style>
+</head>
+<body>
+    <header class="premium-hero">
+        <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 10px;">SHOW LOW PRO DETAILING</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9;">The White Mountains' Elite Interior Deep Clean & Restoration Hub</p>
+        <a href="index.html" style="color:white; display:inline-block; margin-top:20px; text-decoration:none; border-bottom: 1px solid white; font-weight: 600;">← Back to Service Hub</a>
+    </header>
+
+    <main class="info-section">
+        <h2 style="text-align:center; color:#1a3044; font-size: 2.2rem; margin-bottom: 25px;">Professional Showroom Restoration</h2>
+        <p style="font-size: 1.1rem; color: #475569;">
+            Professional <strong>mobile car detailing near me</strong> is more than a simple wash—it is a technical decontamination of your vehicle. Show Low residents face extreme conditions, from high-altitude UV paint damage to winter road salt accumulation. Our specialist network uses professional-grade steam extraction and mechanical clay bar treatments to restore your vehicle to a showroom state.
+        </p>
+
+        <div class="price-grid">
+            <div class="price-card">
+                <h3>Interior Deep Clean</h3>
+                <p>Upholstery extraction, salt removal, and cabin sanitization.</p>
+                <span class="amount">$150 — $250</span>
+                <ul class="perks">
+                    <li><span>✓</span> Hot water soil extraction</li>
+                    <li><span>✓</span> Steam sanitizing protocol</li>
+                    <li><span>✓</span> Premium leather conditioning</li>
+                </ul>
+            </div>
+
+            <div class="price-card" style="border-top: 5px solid #1a3044;">
+                <h3>Full Showroom Detail</h3>
+                <p>Mechanical paint decontamination and high-grade protection.</p>
+                <span class="amount">$200 — $400</span>
+                <ul class="perks">
+                    <li><span>✓</span> Iron and fallout removal</li>
+                    <li><span>✓</span> Clay bar paint smoothing</li>
+                    <li><span>✓</span> Professional-grade paint sealant</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <p style="color: #64748b; font-style: italic; margin-bottom: 25px;">*Final assessments provided by the specialist based on vehicle soil level.</p>
+            <button onclick="openBot('Detailing Triage')" class="chat-btn" style="background: #1a3044; color: #fff; padding: 25px 60px; font-weight: bold; font-size: 1.3rem; border-radius: 8px; border: none; cursor: pointer; transition: transform 0.2s;">
+                BEGIN DETAILING ASSESSMENT
+            </button>
+        </div>
+    </main>
+
+    <div id="bot-launcher" onclick="openBot()"><svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2 22l5-1.338C8.47 21.513 10.179 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.474 0-2.85-.387-4.04-1.06l-2.435.652.652-2.435C5.387 14.85 5 13.474 5 12c0-3.859 3.141-7 7-7s7 3.141 7 7-3.141 7-7 7z"/></svg></div>
+    <div id="bot-container"><div id="chat-header"><div id="chat-header-info"><span>Priority Connection</span></div><button onclick="closeBot()">&times;</button></div><div id="chat-box"></div><div id="chat-input-container"></div></div>
+    <div style="display:none;"><input type="text" id="hp_email_bot"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

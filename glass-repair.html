@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Glass Repair Show Low | Windshield Replacement & Rock Chips</title>
+    <meta name="description" content="Premium mobile auto glass in Show Low, AZ. Specialized in windshield rock chip repair, ADAS calibration, and insurance-approved glass replacement.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .premium-hero { background: linear-gradient(rgba(26, 48, 68, 0.9), rgba(26, 48, 68, 0.9)), url('https://images.unsplash.com/photo-1551522435-a13afa10f103?auto=format&fit=crop&w=1200'); background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center; }
+        .data-table { width: 100%; max-width: 950px; margin: 40px auto; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+        .data-table th { background: #1a3044; color: white; padding: 25px; text-align: left; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
+        .data-table td { padding: 25px; border-bottom: 1px solid #edf2f7; color: #334155; font-size: 1rem; }
+        .price-tag { font-weight: 700; color: #1a3044; font-size: 1.1rem; }
+        .triage-badge { background: #dcfce7; color: #166534; padding: 6px 14px; border-radius: 6px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <header class="premium-hero">
+        <h1 style="font-size: 3.5rem; margin-bottom: 15px; font-weight: 800;">AUTO GLASS DISPATCH</h1>
+        <p style="font-size: 1.25rem; opacity: 0.85; max-width: 700px; margin: auto;">Elite Mobile Windshield Replacement & Safety Sensor Calibration</p>
+        <a href="index.html" style="color:white; margin-top:30px; display:inline-block; text-decoration:none; border-bottom: 2px solid #f1c40f; padding-bottom: 5px; font-weight: 600;">Back to Service Hub</a>
+    </header>
+
+    <main style="padding: 80px 20px;">
+        <div style="max-width: 900px; margin: auto; text-align: center; margin-bottom: 80px;">
+            <h2 style="color: #1a3044; font-size: 2.5rem; margin-bottom: 20px;">Precision Triage for Show Low Drivers</h2>
+            <p style="line-height: 1.9; color: #475569; font-size: 1.15rem;">
+                White Mountain Auto Connections specializes in rapid-response glass logistics. Whether you are dealing with a standard rock chip or require a full ADAS-compliant windshield replacement, we connect you with the highest-rated mobile technicians in the 85901 area.
+            </p>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Service Description</th>
+                    <th>Average Market Rate</th>
+                    <th>Triage Protocol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Precision Rock Chip Repair</strong></td>
+                    <td class="price-tag">$50 — $150</td>
+                    <td><span class="triage-badge">Same-Day Dispatch</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Windshield Replacement (Standard)</strong></td>
+                    <td class="price-tag">$200 — $600</td>
+                    <td>Insurance Approved</td>
+                </tr>
+                <tr>
+                    <td><strong>ADAS Calibration & Safety Sync</strong></td>
+                    <td class="price-tag">+$150 — $300</td>
+                    <td>Required for 2018+ Models</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <button onclick="openBot('Glass Triage')" class="chat-btn" style="background: #1a3044; color: #fff; padding: 25px 80px; font-weight: bold; font-size: 1.4rem; border-radius: 8px; border: none; cursor: pointer; transition: transform 0.2s;">
+                REQUEST PRIORITY QUOTE
+            </button>
+            <p style="margin-top: 20px; color: #64748b; font-size: 0.9rem;">No cost for most insurance-backed claims in Arizona.</p>
+        </div>
+    </main>
+
+    <div id="bot-launcher" onclick="openBot()"><svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2 22l5-1.338C8.47 21.513 10.179 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.474 0-2.85-.387-4.04-1.06l-2.435.652.652-2.435C5.387 14.85 5 13.474 5 12c0-3.859 3.141-7 7-7s7 3.141 7 7-3.141 7-7 7z"/></svg></div>
+    <div id="bot-container"><div id="chat-header"><div id="chat-header-info"><span>Priority Dispatch</span></div><button onclick="closeBot()">&times;</button></div><div id="chat-box"></div><div id="chat-input-container"></div></div>
+    <div style="display:none;"><input type="text" id="hp_email_bot"></div>
+    <script src="script.js"></script>
+</body>
+</html>
