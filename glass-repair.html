@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Glass Repair Show Low | Windshield Replacement & Rock Chips</title>
     <meta name="description" content="Premium mobile auto glass in Show Low, AZ. Specialized in windshield rock chip repair, ADAS calibration, and insurance-approved glass replacement.">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2F9M4WGYW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // Tracking traffic for your new Show Low campaign
+      gtag('config', 'G-F2F9M4WGYW');
+    </script>
+
     <link rel="stylesheet" href="style.css">
     <style>
         .premium-hero { background: linear-gradient(rgba(26, 48, 68, 0.9), rgba(26, 48, 68, 0.9)), url('https://images.unsplash.com/photo-1551522435-a13afa10f103?auto=format&fit=crop&w=1200'); background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center; }
@@ -58,16 +69,27 @@
         </table>
 
         <div style="text-align: center; margin-top: 60px;">
-            <button onclick="openBot('Glass Triage')" class="chat-btn" style="background: #1a3044; color: #fff; padding: 25px 80px; font-weight: bold; font-size: 1.4rem; border-radius: 8px; border: none; cursor: pointer; transition: transform 0.2s;">
+            <button onclick="openBot('glass')" class="chat-btn" style="background: #1a3044; color: #fff; padding: 25px 80px; font-weight: bold; font-size: 1.4rem; border-radius: 8px; border: none; cursor: pointer; transition: transform 0.2s;">
                 REQUEST PRIORITY QUOTE
             </button>
             <p style="margin-top: 20px; color: #64748b; font-size: 0.9rem;">No cost for most insurance-backed claims in Arizona.</p>
         </div>
     </main>
 
-    <div id="bot-launcher" onclick="openBot()"><svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2 22l5-1.338C8.47 21.513 10.179 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.474 0-2.85-.387-4.04-1.06l-2.435.652.652-2.435C5.387 14.85 5 13.474 5 12c0-3.859 3.141-7 7-7s7 3.141 7 7-3.141 7-7 7z"/></svg></div>
-    <div id="bot-container"><div id="chat-header"><div id="chat-header-info"><span>Priority Dispatch</span></div><button onclick="closeBot()">&times;</button></div><div id="chat-box"></div><div id="chat-input-container"></div></div>
+    <div id="bot-launcher" onclick="openBot('glass')">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2 22l5-1.338C8.47 21.513 10.179 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.474 0-2.85-.387-4.04-1.06l-2.435.652.652-2.435C5.387 14.85 5 13.474 5 12c0-3.859 3.141-7 7-7s7 3.141 7 7-3.141 7-7 7z"/></svg>
+    </div>
+    
+    <div id="bot-container">
+        <div id="chat-header">
+            <div id="chat-header-info"><span>Priority Dispatch</span></div>
+            <button onclick="closeBot()">&times;</button>
+        </div>
+        <div id="chat-box"></div>
+        <div id="chat-input-container"></div>
+    </div>
     <div style="display:none;"><input type="text" id="hp_email_bot"></div>
+    
     <script src="script.js"></script>
 </body>
 </html>
