@@ -174,5 +174,5 @@ window.onload = () => {
         if (document.getElementById('bot-container').style.display !== 'flex') {
             openBot(autoContext);
         } 
-    }, 9000);
+    }, 4000);
 };
