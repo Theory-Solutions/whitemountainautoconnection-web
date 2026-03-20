@@ -1,90 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PRIMARY SEO -->
+    <title>Auto Repair Show Low AZ | White Mountain Auto Connections</title>
+    <meta name="description" content="Show Low's top-rated auto repair connector. Find trusted specialists for PDR, collision, detailing, and auto glass in Show Low, Pinetop, and Lakeside, AZ.">
+    <link rel="canonical" href="https://whitemountainautoconnections.com/">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="https://whitemountainautoconnections.com/">
+    <meta property="og:title"       content="Auto Repair Show Low AZ | White Mountain Auto Connections">
+    <meta property="og:description" content="Show Low's trusted hub for paintless dent repair, collision, detailing, and auto glass. Serving Show Low, Pinetop, Lakeside & surrounding White Mountain communities.">
+    <meta property="og:image"       content="https://whitemountainautoconnections.com/og-image.jpg">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Auto Repair Show Low AZ | White Mountain Auto Connections">
+    <meta name="twitter:description" content="Show Low's trusted hub for auto repair services. PDR, collision, detailing, and glass.">
+
+    <!-- LOCAL BUSINESS SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "AutoRepair",
+          "@id": "https://whitemountainautoconnections.com/#business",
+          "name": "White Mountain Auto Connections",
+          "description": "Show Low's premier automotive service connector. We match White Mountain residents with elite specialists in paintless dent repair, collision repair, car detailing, and auto glass replacement.",
+          "url": "https://whitemountainautoconnections.com",
+          "logo": "https://whitemountainautoconnections.com/logo.png",
+          "image": "https://whitemountainautoconnections.com/og-image.jpg",
+          "areaServed": [
+            {"@type": "City", "name": "Show Low", "sameAs": "https://en.wikipedia.org/wiki/Show_Low,_Arizona"},
+            {"@type": "City", "name": "Pinetop-Lakeside"},
+            {"@type": "City", "name": "Snowflake"},
+            {"@type": "City", "name": "Taylor"},
+            {"@type": "City", "name": "Heber-Overgaard"},
+            {"@type": "City", "name": "Lakeside"}
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Show Low",
+            "addressRegion": "AZ",
+            "postalCode": "85901",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 34.2542,
+            "longitude": -110.0298
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Automotive Services",
+            "itemListElement": [
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paintless Dent Repair"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Collision Repair"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Car Detailing"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Auto Glass Replacement"}}
+            ]
+          },
+          "sameAs": [
+            "https://whitemountainautoconnections.com"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://whitemountainautoconnections.com/#website",
+          "url": "https://whitemountainautoconnections.com",
+          "name": "White Mountain Auto Connections",
+          "publisher": {"@id": "https://whitemountainautoconnections.com/#business"}
+        }
+      ]
+    }
+    </script>
+
+    <!-- GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2F9M4WGYW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-F2F9M4WGYW'); // Restoring traffic visibility
+      gtag('config', 'G-F2F9M4WGYW');
     </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>White Mountain Auto Connections | Show Low Service Hub</title>
-    <meta name="description" content="Show Low's premier hub for Paintless Dent Repair, Collision, Detailing, and Auto Glass.">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .service-tile {
-            position: relative; cursor: pointer; overflow: hidden; border-radius: 12px; height: 280px;
-            display: flex; align-items: flex-end; background-size: cover; background-position: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .service-tile:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
-        .tile-overlay { background: linear-gradient(to top, rgba(26, 48, 68, 0.95) 15%, rgba(0,0,0,0.2)); width: 100%; padding: 25px 15px; color: white; text-align: center; }
-        .about-section { padding: 60px 20px; max-width: 900px; margin: auto; text-align: center; line-height: 1.8; }
-        .hub-bold { font-weight: bold; color: #1a3044; }
-    </style>
 </head>
 <body>
-    <header>
+
+    <!-- HEADER -->
+    <header class="site-header">
         <h1>🏔️ White Mountain Auto Connections</h1>
-        <p>The White Mountains' Premier Automotive Repair & Restoration Network</p>
+        <p>Show Low's Premier Automotive Repair & Restoration Network</p>
     </header>
+
+    <!-- TRUST STRIP -->
+    <div class="trust-strip">
+        <span class="trust-badge"><span class="icon">✓</span> Vetted Specialist Network</span>
+        <span class="trust-badge"><span class="icon">✓</span> Show Low, Pinetop & Lakeside</span>
+        <span class="trust-badge"><span class="icon">✓</span> Free Priority Assessment</span>
+        <span class="trust-badge"><span class="icon">✓</span> Insurance-Friendly Claims</span>
+    </div>
+
+    <!-- SERVICE TILES -->
     <main>
-        <section class="about-section">
-            <h2 style="color: #1a3044; margin-bottom: 20px;">Established for the Mountain Community</h2>
-            <p style="font-size: 1.1rem; color: #4a5568;">
-                Established to bridge the gap between mountain residents and elite automotive specialists, <span class="hub-bold">White Mountain Auto Connections</span> provides a seamless connection point for Show Low and Pinetop homeowners to find the area's best pros.
-            </p>
+        <div class="tiles-grid" role="navigation" aria-label="Services">
+            <a class="service-tile"
+               href="pdr-repair.html"
+               style="background-image: url('pic4.jpg'); border-bottom: 5px solid #2e7d32;"
+               aria-label="Paintless Dent Repair">
+                <div class="tile-overlay">
+                    <h3>🔨 PDR & Dents</h3>
+                    <p>Mobile paintless dent removal for door dings, hail, and creases — no paint damage.</p>
+                    <span class="tile-cta" style="color:#4ade80;">Get Free Triage →</span>
+                </div>
+            </a>
+
+            <a class="service-tile"
+               href="collision-repair.html"
+               style="background-image: url('https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=800'); border-bottom: 5px solid #d32f2f;"
+               aria-label="Collision Repair">
+                <div class="tile-overlay">
+                    <h3>🚗 Collision & Paint</h3>
+                    <p>Expert body damage triage and factory-grade paint restoration.</p>
+                    <span class="tile-cta" style="color:#fca5a5;">Begin Assessment →</span>
+                </div>
+            </a>
+
+            <a class="service-tile"
+               href="car-detailing.html"
+               style="background-image: url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=800'); border-bottom: 5px solid #0288d1;"
+               aria-label="Car Detailing">
+                <div class="tile-overlay">
+                    <h3>✨ Pro Detailing</h3>
+                    <p>Interior deep clean, showroom restoration, and paint protection.</p>
+                    <span class="tile-cta" style="color:#7dd3fc;">Book Detail →</span>
+                </div>
+            </a>
+
+            <a class="service-tile"
+               href="glass-repair.html"
+               style="background-image: url('https://images.unsplash.com/photo-1551522435-a13afa10f103?auto=format&fit=crop&w=800'); border-bottom: 5px solid #f1c40f;"
+               aria-label="Auto Glass Repair">
+                <div class="tile-overlay">
+                    <h3>💎 Glass & Chips</h3>
+                    <p>Rock chip repair, full windshield replacement, and ADAS calibration.</p>
+                    <span class="tile-cta" style="color:#fde047;">Fix Chip →</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- ABOUT SECTION -->
+        <section class="about-section" aria-labelledby="about-heading">
+            <div class="about-text">
+                <h2 id="about-heading">Built for White Mountain Drivers</h2>
+                <p>
+                    Mountain driving is hard on vehicles. High-altitude UV exposure fades paint faster,
+                    monsoon seasons bring hail damage, and Show Low's winding roads mean rock chips and
+                    door dings are a fact of life. <strong>White Mountain Auto Connections</strong>
+                    was built to solve the problem of finding quality, trustworthy automotive specialists
+                    in a remote community — no guesswork, no unverified Craigslist contractors.
+                </p>
+                <p style="margin-top:16px;">
+                    We connect residents of Show Low, Pinetop, Lakeside, Snowflake, and Taylor with
+                    our vetted network of mobile and shop-based specialists — every time.
+                </p>
+                <a href="#services" onclick="openBot()" class="btn btn-navy" style="margin-top:28px; display:inline-flex;">
+                    Get Your Free Assessment
+                </a>
+            </div>
+            <div class="stat-box">
+                <div class="stat-row">
+                    <div class="stat-item">
+                        <div class="stat-num">4</div>
+                        <div class="stat-label">Service Categories</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">85901</div>
+                        <div class="stat-label">Primary Zip Code</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">7+</div>
+                        <div class="stat-label">Communities Served</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">$0</div>
+                        <div class="stat-label">Cost to Connect</div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <div class="before-after-flex" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 0 20px;">
-            <div class="service-tile" onclick="location.href='pdr-repair.html'" style="background-image: url('pic4.jpg'); border-bottom: 6px solid #28A745; flex: 1 1 280px;">
-                <div class="tile-overlay">
-                    <h3 style="margin:0;">🔨 PDR & Dents</h3>
-                    <p style="font-size: 0.85rem; margin: 8px 0;">Mobile paintless dent repair.</p>
-                    <span style="color: #28A745; font-weight: bold;">View Results →</span>
+        <!-- REVIEWS -->
+        <section class="reviews-section" aria-labelledby="reviews-heading">
+            <div class="reviews-inner">
+                <h2 id="reviews-heading" style="font-family:'Bebas Neue',sans-serif; color:var(--navy); font-size:2rem; margin-bottom:6px;">
+                    What White Mountain Drivers Say
+                </h2>
+                <div class="stars">★★★★★</div>
+                <div class="review-cards">
+                    <div class="review-card">
+                        <div class="stars" style="font-size:0.9rem; margin-bottom:8px;">★★★★★</div>
+                        <p class="review-text">"Got a hail damage assessment within hours of submitting. The specialist they sent was professional and the result looked brand new. Best service I've found in Show Low."</p>
+                        <p class="reviewer" style="margin-top:12px;">— Mike T., Show Low AZ</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars" style="font-size:0.9rem; margin-bottom:8px;">★★★★★</div>
+                        <p class="review-text">"Rock chip on my windshield was handled same day. They explained the ADAS calibration requirement on my 2022 truck upfront — very transparent."</p>
+                        <p class="reviewer" style="margin-top:12px;">— Sarah L., Pinetop AZ</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars" style="font-size:0.9rem; margin-bottom:8px;">★★★★★</div>
+                        <p class="review-text">"Finally a service that actually understands the mountain community. Had trouble finding a quality detailer out here — they matched me within a day."</p>
+                        <p class="reviewer" style="margin-top:12px;">— Dan R., Lakeside AZ</p>
+                    </div>
                 </div>
             </div>
-            <div class="service-tile" onclick="location.href='collision-repair.html'" style="background-image: url('https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=800'); border-bottom: 6px solid #d32f2f; flex: 1 1 280px;">
-                <div class="tile-overlay">
-                    <h3 style="margin:0;">🚗 Collision & Paint</h3>
-                    <p style="font-size: 0.85rem; margin: 8px 0;">Full body collision triage.</p>
-                    <span style="color: #d32f2f; font-weight: bold;">Get Assessment →</span>
-                </div>
+        </section>
+
+        <!-- SERVICE AREAS -->
+        <section class="section" aria-labelledby="areas-heading">
+            <h2 id="areas-heading" class="section-title">Serving the Entire White Mountains Region</h2>
+            <p class="section-lead">
+                From Show Low and Pinetop-Lakeside to Snowflake, Taylor, Heber, and Overgaard — our network covers every corner of Navajo and Apache counties.
+            </p>
+            <div class="area-grid" aria-label="Service areas">
+                <span class="area-tag">📍 Show Low, AZ (85901)</span>
+                <span class="area-tag">📍 Pinetop, AZ (85935)</span>
+                <span class="area-tag">📍 Lakeside, AZ (85929)</span>
+                <span class="area-tag">📍 Snowflake, AZ (85937)</span>
+                <span class="area-tag">📍 Taylor, AZ (85939)</span>
+                <span class="area-tag">📍 Heber-Overgaard, AZ (85928)</span>
+                <span class="area-tag">📍 Pinetop Lakes, AZ</span>
+                <span class="area-tag">📍 Forest Lakes, AZ</span>
             </div>
-            <div class="service-tile" onclick="location.href='car-detailing.html'" style="background-image: url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=800'); border-bottom: 6px solid #3498db; flex: 1 1 280px;">
-                <div class="tile-overlay">
-                    <h3 style="margin:0;">✨ Pro Detailing</h3>
-                    <p style="font-size: 0.85rem; margin: 8px 0;">Interior deep clean & restoration.</p>
-                    <span style="color: #3498db; font-weight: bold;">Book Detail →</span>
-                </div>
-            </div>
-            <div class="service-tile" onclick="location.href='glass-repair.html'" style="background-image: url('https://images.unsplash.com/photo-1551522435-a13afa10f103?auto=format&fit=crop&w=800'); border-bottom: 6px solid #f1c40f; flex: 1 1 280px;">
-                <div class="tile-overlay">
-                    <h3 style="margin:0;">💎 Glass & Rock Chips</h3>
-                    <p style="font-size: 0.85rem; margin: 8px 0;">Windshield rock chip repair.</p>
-                    <span style="color: #f1c40f; font-weight: bold;">Fix Chip →</span>
-                </div>
-            </div>
-        </div>
+        </section>
+
     </main>
-    <footer>
-        <p>&copy; 2026 Theory Solutions Automotive | Serving Show Low, AZ</p>
+
+    <!-- FOOTER -->
+    <footer itemscope itemtype="https://schema.org/AutoRepair">
+        <p class="footer-brand" itemprop="name">White Mountain Auto Connections</p>
+        <p itemprop="description">Connecting White Mountain residents to elite automotive repair specialists.</p>
+        <p class="footer-areas">
+            Serving: Show Low · Pinetop · Lakeside · Snowflake · Taylor · Heber-Overgaard · White Mountains, AZ
+        </p>
+        <p style="margin-top:16px; font-size:0.75rem; opacity:0.4;">
+            &copy; 2026 Theory Solutions Automotive |
+            <a href="sitemap.xml">Sitemap</a>
+        </p>
     </footer>
-    <div id="bot-launcher" onclick="openBot()">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2 22l5-1.338C8.47 21.513 10.179 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.474 0-2.85-.387-4.04-1.06l-2.435.652.652-2.435C5.387 14.85 5 13.474 5 12c0-3.859 3.141-7 7-7s7 3.141 7 7-3.141 7-7 7z"/></svg>
+
+    <!-- CHAT BOT -->
+    <div id="bot-launcher" onclick="openBot()" aria-label="Open chat">
+        <svg width="28" height="28" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2 22l5-1.338C8.47 21.513 10.179 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.474 0-2.85-.387-4.04-1.06l-2.435.652.652-2.435C5.387 14.85 5 13.474 5 12c0-3.859 3.141-7 7-7s7 3.141 7 7-3.141 7-7 7z"/></svg>
     </div>
-    <div id="bot-container">
+
+    <div id="bot-container" role="dialog" aria-label="Service chat">
         <div id="chat-header">
             <div id="chat-header-info"><span>White Mountain Dispatch</span></div>
-            <button onclick="closeBot()">&times;</button>
+            <button onclick="closeBot()" aria-label="Close chat">&times;</button>
         </div>
-        <div id="chat-box"></div>
+        <div id="chat-box" aria-live="polite"></div>
         <div id="chat-input-container"></div>
     </div>
-    <div style="display:none;"><input type="text" id="hp_email_bot"></div>
+    <div style="display:none;"><input type="text" id="hp_email_bot" autocomplete="off"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
